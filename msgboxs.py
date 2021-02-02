@@ -22,13 +22,9 @@ def correct_msgbox(title, text):
     msg_box.exec_()
   
 def input_error_msgbox(title, text):
-    msg_box = QMessageBox()
-    msg_box.setWindowTitle(title)
-    msg_box.setText(text)
+    msg_box = MsgBox(title, text)
     icon = 'pys2_msgboxs/icons/input_error.png'
-    msg_box.setIconPixmap(icon)
-    q_icon = QIcon(icon)
-    msg_box.setWindowIcon(q_icon)
+    msg_box.set_custom_icon(icon)
     msg_box.exec_()
 
 def warging_msgbox(title, text):
